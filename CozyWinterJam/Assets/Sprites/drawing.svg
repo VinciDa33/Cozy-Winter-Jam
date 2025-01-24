@@ -25,9 +25,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:snap-object-midpoints="true"
-     inkscape:zoom="8"
-     inkscape:cx="156.0625"
-     inkscape:cy="91.25"
+     inkscape:zoom="11.313708"
+     inkscape:cx="12.772116"
+     inkscape:cy="109.15961"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="-8"
@@ -1031,5 +1031,31 @@ hBBCiDwkAYAQQgiRhyQAEEIIIfLQ/w8xr/8Mkf23LQAAAABJRU5ErkJggg==
        inkscape:export-filename="C:\Users\marcu\Desktop\Cozy-Winter-Jam\CozyWinterJam\Assets\Sprites\Tree.png"
        inkscape:export-xdpi="1000"
        inkscape:export-ydpi="1000" />
+    <path
+       id="rect82349"
+       style="fill:#a5540d;fill-opacity:1;stroke:#1e1e1e;stroke-width:0.75590552;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:73.5682;stroke-opacity:1;paint-order:normal"
+       d="M 105.0332 51.841797 A 0.94488189 0.94488189 0 0 0 104.56055 51.96875 L 96.378906 56.693359 L 68.03125 56.693359 A 1.8897638 1.8897638 0 0 0 66.142578 58.582031 A 1.8897638 1.8897638 0 0 0 68.03125 60.472656 L 96.378906 60.472656 L 104.56055 65.197266 A 0.94488189 0.94488189 0 0 0 105.0332 65.324219 A 0.94488189 0.94488189 0 0 0 105.97852 64.378906 A 0.94488189 0.94488189 0 0 0 105.47656 63.544922 L 98.521484 59.527344 L 105.82617 59.527344 A 0.94488189 0.94488189 0 0 0 106.77148 58.582031 A 0.94488189 0.94488189 0 0 0 105.82617 57.638672 L 98.521484 57.638672 L 105.50586 53.605469 A 0.94488189 0.94488189 0 0 0 105.97852 52.787109 A 0.94488189 0.94488189 0 0 0 105.0332 51.841797 z "
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\marcu\Desktop\Cozy-Winter-Jam\CozyWinterJam\Assets\Sprites\Arm.png"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
+    <g
+       id="g84372"
+       transform="rotate(-30,54.229709,21.54084)"
+       inkscape:export-filename="C:\Users\marcu\Desktop\Cozy-Winter-Jam\CozyWinterJam\Assets\Sprites\Carrot.png"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000">
+      <path
+         id="path83104"
+         style="fill:#c4840f;fill-opacity:1;stroke:#1e1e1e;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:73.5682;stroke-opacity:1;paint-order:normal"
+         d="m 5.328483,4.3836205 a 0.71929304,0.71929304 0 0 0 -0.9826144,0.2632911 0.71929304,0.71929304 0 0 0 0.2632905,0.9826147 0.71929304,0.71929304 0 0 0 0.3754749,0.095744 0.64736374,0.64736374 0 0 0 0.1588156,0.1296349 0.64736374,0.64736374 0 0 0 0.3415481,0.086115 0.57543443,0.57543443 0 0 0 0.1305497,0.103361 0.57543443,0.57543443 0 0 0 0.3088945,0.076359 0.50350513,0.50350513 0 0 0 0.1008825,0.077132 0.50350513,0.50350513 0 0 0 0.3016066,0.064599 0.43157582,0.43157582 0 0 0 0.1079696,0.088946 0.43157582,0.43157582 0 0 0 0.267387,0.054285 0.35964652,0.35964652 0 0 0 0.080072,0.063223 0.35964652,0.35964652 0 0 0 0.2340365,0.043953 0.28771723,0.28771723 0 0 0 0.051104,0.037567 0.28771723,0.28771723 0 0 0 0.2228376,0.02737 0.21578791,0.21578791 0 0 0 0.062295,0.054164 A 0.21578791,0.21578791 0 0 0 7.6474658,6.5530877 0.21578791,0.21578791 0 0 0 7.5683714,6.2583106 0.21578791,0.21578791 0 0 0 7.4905735,6.2315923 0.28771723,0.28771723 0 0 0 7.3551976,6.0521396 0.28771723,0.28771723 0 0 0 7.2972369,6.0267449 0.35964652,0.35964652 0 0 0 7.1420247,5.8459665 0.35964652,0.35964652 0 0 0 7.0476419,5.8081271 0.43157582,0.43157582 0 0 0 6.8665303,5.6038135 0.43157582,0.43157582 0 0 0 6.7359751,5.5548796 0.50350513,0.50350513 0 0 0 6.5288416,5.325757 0.50350513,0.50350513 0 0 0 6.4119342,5.276974 0.57543443,0.57543443 0 0 0 6.1909509,5.0477527 0.57543443,0.57543443 0 0 0 6.0367543,4.98654 0.64736374,0.64736374 0 0 0 5.7908135,4.7336393 0.64736374,0.64736374 0 0 0 5.5996721,4.6608857 0.71929304,0.71929304 0 0 0 5.328483,4.3836205 Z" />
+      <ellipse
+         style="fill:#1e1e1e;fill-opacity:1;stroke:none;stroke-width:0.497265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:73.5682;stroke-opacity:1;paint-order:normal"
+         id="path84143"
+         cx="7.5098562"
+         cy="6.4691753"
+         rx="0.14908628"
+         ry="0.13154672" />
+    </g>
   </g>
 </svg>
