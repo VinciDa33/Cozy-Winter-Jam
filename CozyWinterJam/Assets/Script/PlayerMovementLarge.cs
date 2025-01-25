@@ -13,6 +13,8 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckDistance;
+    private bool isGrounded;
+    private string[] sfx = {"SnowLand1", "SnowLand2", "SnowLand3"};
     
     [Header("Wall climb")]
     [SerializeField] private float wallJumpForce;
@@ -22,6 +24,8 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
     
     void Start()
     {
+        SoundManager.instance.StopMusic();
+        SoundManager.instance.PlayMusic("large");
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -33,13 +37,30 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
         else
             rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0f, deceleration * Time.deltaTime), rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
-            if (Physics2D.Raycast(transform.position + new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance, groundLayer) || Physics2D.Raycast(transform.position - new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance, groundLayer))
+        // I know this is a mess but it's a game jam game, this was the best i could come up with to play sounds on landing
+        if (Physics2D.Raycast(transform.position + new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance,
+                groundLayer) || Physics2D.Raycast(transform.position - new Vector3(0.35f, 0f, 0f), Vector2.down,
+                groundCheckDistance, groundLayer))
+        {
+            if (!isGrounded)
             {
-                rb.velocity += new Vector2(0f, jumpForce);
-                return;
+                // Idk it gets louder if you move faster on the x axis even though it's a y axis sound
+                /*
+                var volume = Mathf.Clamp(Mathf.Abs(rb.velocity.y) / 10, 0.1f, 1f);
+                SoundManager.instance.SetSFXVolume(volume);
+                */
+                var random = Random.Range(0, sfx.Length);
+                SoundManager.instance.PlayPanSFX(sfx[random]);
+                isGrounded = true;
             }
-
+            
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+                rb.velocity += new Vector2(0f, jumpForce);
+        }
+        else
+        {
+            isGrounded = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {

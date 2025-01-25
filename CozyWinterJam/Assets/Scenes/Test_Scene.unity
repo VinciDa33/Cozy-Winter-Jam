@@ -417,6 +417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2191655287472689536, guid: 28e5b0b30091d0e4f90c3c89cde789de, type: 3}
+      propertyPath: trail
+      value: 
+      objectReference: {fileID: 1212407766}
     - target: {fileID: 5645056742304925118, guid: 28e5b0b30091d0e4f90c3c89cde789de, type: 3}
       propertyPath: m_Name
       value: Player Small
@@ -1920,6 +1924,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!96 &1212407766 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 114559094140776912, guid: 28e5b0b30091d0e4f90c3c89cde789de, type: 3}
+  m_PrefabInstance: {fileID: 207746972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1215268925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3619,6 +3628,58 @@ PrefabInstance:
     - target: {fileID: 3456409937778302624, guid: b25852076e29a984a931370216254250, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 66022bdde18638741b7cb0e847e12916, type: 3}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: little
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fc00deda1b2439342846eb8ea02a5b92, type: 3}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cce42fe3444f70b4bb5a169e0f86df04, type: 3}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: large
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5894dfe17e37a6d4a84161f7389e3351, type: 3}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: SnowLand1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d87b7bdad06b8a4cb511e14c126381a, type: 3}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: SnowLand2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c3ebaa2a44efce45a0d2b2512226860, type: 3}
+    - target: {fileID: 4174185414710395951, guid: b25852076e29a984a931370216254250, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: SnowLand3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

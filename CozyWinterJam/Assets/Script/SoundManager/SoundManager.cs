@@ -62,7 +62,7 @@ public class SoundManager : MonoBehaviour
         }
         
         float cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2;
-        var pan = Mathf.Clamp((player.position.x - gameObject.transform.position.x) / (cameraWidth / 2), -1f, 1f);
+        var pan = Mathf.Clamp((player.position.x - gameObject.transform.position.x) / (cameraWidth / 2), -0.7f, 0.7f);
         
         AudioClip clip = sounds.Find(s => s.name == name).clip;
         if (clip == null)

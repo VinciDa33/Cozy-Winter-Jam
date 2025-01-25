@@ -10,12 +10,14 @@ public class PlayerMovementSmall : MonoBehaviour, PlayerInterface
     [SerializeField] private float accelereation;
     [SerializeField] private float deceleration;
     [SerializeField] private float maxSpeed;
+    [SerializeField] private TrailRenderer trail; //Manually referenced
 
     [Header("Visual")] [SerializeField] private Transform face;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        SoundManager.instance.PlayMusic("little");
     }
 
     void Update()
@@ -26,11 +28,22 @@ public class PlayerMovementSmall : MonoBehaviour, PlayerInterface
         else
             rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0f, deceleration * Time.deltaTime), rb.velocity.y);
         
+        if (Math.Abs(rb.velocity.x) < maxSpeed)
+            trail.enabled = true;
+        else 
+            StartCoroutine(WaitAndDisableTrail());
+        
         face.Rotate(Vector3.forward, -rb.velocity.x * 0.1f);
     }
 
     public int getSize()
     {
         return 1;
+    }
+    
+    private IEnumerator WaitAndDisableTrail()
+    {
+        yield return new WaitForSeconds(0.5f);
+        trail.enabled = false;
     }
 }
