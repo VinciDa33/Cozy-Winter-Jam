@@ -23,11 +23,14 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
     [SerializeField] private float wallCheckDistance;
     [SerializeField] private LayerMask climbable;
     
+    private Animator anim;
+    
     void Start()
     {
         SoundManager.instance.StopMusic();
         SoundManager.instance.PlayMusic("large");
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -36,7 +39,22 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
         if (input != 0 && Mathf.Abs(rb.velocity.x) < maxSpeed)
             rb.velocity += new Vector2(input * accelereation * Time.deltaTime, 0);
         else
-            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0f, deceleration * Time.deltaTime), rb.velocity.y);
+        {
+            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0f, deceleration * Time.deltaTime),
+                rb.velocity.y);
+            
+            if (anim.GetCurrentAnimatorClipInfo(0)[0].clip.name != "LargePlayerJump")
+            {
+                if (rb.velocity.x > 0)
+                    anim.Play("LargePlayerWalkRight");
+                else if (rb.velocity.x < 0)
+                    anim.Play("LargePlayerWalkLeft");
+                else
+                    anim.Play("LargePlayerIdle");
+            }
+            else if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f)
+                anim.Play("LargePlayerIdle");
+        }
 
         // I know this is a mess but it's a game jam game, this was the best i could come up with to play sounds on landing
         if (Physics2D.Raycast(transform.position + new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance, groundLayer) || Physics2D.Raycast(transform.position - new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance, groundLayer))
@@ -52,9 +70,12 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
                 SoundManager.instance.PlayPanSFX(sfx[random]);
                 isGrounded = true;
             }
-            
+
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+            {
                 rb.velocity += new Vector2(0f, jumpForce);
+                anim.Play("LargePlayerJump", 0, 0f);
+            }
         }
         else
         {

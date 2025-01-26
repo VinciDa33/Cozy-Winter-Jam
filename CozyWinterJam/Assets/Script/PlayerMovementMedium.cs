@@ -17,12 +17,15 @@ public class PlayerMovementMedium : MonoBehaviour, PlayerInterface
     [SerializeField] private float groundCheckDistance;
     private bool isGrounded = true;
     private string[] sfx = {"SnowLand1", "SnowLand2", "SnowLand3"};
+
+    private Animator anim;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         SoundManager.instance.StopMusic();
         SoundManager.instance.PlayMusic("medium");
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,9 +34,24 @@ public class PlayerMovementMedium : MonoBehaviour, PlayerInterface
         if (input != 0 && Mathf.Abs(rb.velocity.x) < maxSpeed)
             rb.velocity += new Vector2(input * accelereation * Time.deltaTime, 0);
         else
-            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0f, deceleration * Time.deltaTime), rb.velocity.y);
+        {
+            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0f, deceleration * Time.deltaTime),
+                rb.velocity.y);
+            
+            if (anim.GetCurrentAnimatorClipInfo(0)[0].clip.name != "MediumPlayerJump")
+            {
+                if (rb.velocity.x > 0)
+                    anim.Play("MediumPlayerWalkRight");
+                else if (rb.velocity.x < 0)
+                    anim.Play("MediumPlayerWalkLeft");
+                else
+                    anim.Play("MediumPlayerIdle");
+            }
+            else if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f)
+                anim.Play("MediumPlayerIdle");
+        }
 
-        
+
         // I know this is a mess but it's a game jam game, this was the best i could come up with to play sounds on landing
         if (Physics2D.Raycast(transform.position + new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance,
                 groundLayer) || Physics2D.Raycast(transform.position - new Vector3(0.35f, 0f, 0f), Vector2.down,
@@ -50,9 +68,12 @@ public class PlayerMovementMedium : MonoBehaviour, PlayerInterface
                 SoundManager.instance.PlayPanSFX(sfx[random]);
                 isGrounded = true;
             }
-            
+
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+            {
                 rb.velocity += new Vector2(0f, jumpForce);
+                anim.Play("MediumPlayerJump", 0, 0f);
+            }
         }
         else
         {

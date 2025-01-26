@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4548451418659490514}
   - component: {fileID: 8056122100782556839}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Sprite Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 2838269951876736004}
   - component: {fileID: 2353000784887169675}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Sprite Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 2059505768859412970}
   - component: {fileID: 5412172249126150267}
   - component: {fileID: 328633564377024253}
+  - component: {fileID: 8879553196836169832}
   m_Layer: 0
   m_Name: Player Large
   m_TagString: Player
@@ -496,6 +497,27 @@ MonoBehaviour:
   climbable:
     serializedVersion: 2
     m_Bits: 256
+--- !u!95 &8879553196836169832
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5463225730261098368}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3707e64cc6982674087db4fb4caa8c2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7507025099017954632
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +529,7 @@ GameObject:
   - component: {fileID: 1258313947821580902}
   - component: {fileID: 4591959293217415813}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Sprite Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
