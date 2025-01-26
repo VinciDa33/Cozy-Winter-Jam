@@ -39,9 +39,7 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
             rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0f, deceleration * Time.deltaTime), rb.velocity.y);
 
         // I know this is a mess but it's a game jam game, this was the best i could come up with to play sounds on landing
-        if (Physics2D.Raycast(transform.position + new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance,
-                groundLayer) || Physics2D.Raycast(transform.position - new Vector3(0.35f, 0f, 0f), Vector2.down,
-                groundCheckDistance, groundLayer))
+        if (Physics2D.Raycast(transform.position + new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance, groundLayer) || Physics2D.Raycast(transform.position - new Vector3(0.35f, 0f, 0f), Vector2.down, groundCheckDistance, groundLayer))
         {
             if (!isGrounded)
             {
