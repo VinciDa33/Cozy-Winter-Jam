@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - WinScreen
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 2583342757
+    locked: 0
+  - name: UI
+    uniqueID: 1489549833
     locked: 0

@@ -19,7 +19,7 @@ public class MainMenuButtons : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level_1");
     }
     
     public void Options()

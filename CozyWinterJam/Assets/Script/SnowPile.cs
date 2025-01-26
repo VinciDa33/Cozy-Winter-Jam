@@ -44,6 +44,10 @@ public class SnowPile : MonoBehaviour
         {
             Instantiate(completePlayer, transform.position, quaternion.identity);
             SoundManager.instance.PlayGlobalSFX("largeToCom");
+
+            GameObject winScreen = GameObject.FindGameObjectWithTag("WinScreen");
+            winScreen.transform.GetChild(0).gameObject.SetActive(true);
+
         }
 
         Instantiate(particleEffect, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
