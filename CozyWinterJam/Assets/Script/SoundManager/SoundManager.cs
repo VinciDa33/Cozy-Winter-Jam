@@ -48,7 +48,7 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("Sound " + name + " not found!");
             return;
         }
-        
+        sfxSource.panStereo = 0;
         sfxSource.PlayOneShot(clip);
     }
     

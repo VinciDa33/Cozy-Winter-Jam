@@ -29,11 +29,22 @@ public class SnowPile : MonoBehaviour
         
         int currentSize = other.gameObject.GetComponent<PlayerInterface>().getSize();
         if (currentSize == 1)
+        {
             Instantiate(mediumPlayer, transform.position, quaternion.identity);
+            SoundManager.instance.PlayGlobalSFX("smallToMed");
+        }
+
         if (currentSize == 2)
+        {
             Instantiate(largePlayer, transform.position, quaternion.identity);
+            SoundManager.instance.PlayGlobalSFX("medToLarge");
+        }
+
         if (currentSize == 3)
+        {
             Instantiate(completePlayer, transform.position, quaternion.identity);
+            SoundManager.instance.PlayGlobalSFX("largeToCom");
+        }
 
         Instantiate(particleEffect, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
         Destroy(other.gameObject);

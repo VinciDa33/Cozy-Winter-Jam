@@ -15,7 +15,7 @@ public class PlayerMovementMedium : MonoBehaviour, PlayerInterface
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckDistance;
-    private bool isGrounded;
+    private bool isGrounded = true;
     private string[] sfx = {"SnowLand1", "SnowLand2", "SnowLand3"};
     
     void Start()

@@ -13,8 +13,9 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckDistance;
-    private bool isGrounded;
+    private bool isGrounded = true;
     private string[] sfx = {"SnowLand1", "SnowLand2", "SnowLand3"};
+    private string[] wallJumpSfx = {"wallClimb1", "wallClimb2", "wallClimb3"};
     
     [Header("Wall climb")]
     [SerializeField] private float wallJumpForce;
@@ -66,11 +67,13 @@ public class PlayerMovementLarge : MonoBehaviour, PlayerInterface
         {
             if (Physics2D.Raycast(transform.position, Vector2.right, wallCheckDistance, climbable))
             {
+                SoundManager.instance.PlayPanSFX(wallJumpSfx[Random.Range(0, wallJumpSfx.Length)]);
                 rb.velocity = new Vector2(-wallJumpKickback, wallJumpForce);
             }
 
             if (Physics2D.Raycast(transform.position, Vector2.left, wallCheckDistance, climbable))
             {
+                SoundManager.instance.PlayPanSFX(wallJumpSfx[Random.Range(0, wallJumpSfx.Length)]);
                 rb.velocity = new Vector2(wallJumpKickback, wallJumpForce);
             }
         }
