@@ -89,6 +89,18 @@ public class SoundManager : MonoBehaviour
     {
         sfxSource.volume = volume;
     }
+    
+    public void SetMusicVolumeMaineMenuSettings(float volume)
+    {
+        musicSource.volume = volume;
+    }
+    
+    public void SetSFXVolumeMaineMenuSettings(float volume)
+    {
+        sfxSource.Stop();
+        sfxSource.volume = volume;
+        PlayGlobalSFX("treeshake1");
+    }
 }
 
 [System.Serializable]
