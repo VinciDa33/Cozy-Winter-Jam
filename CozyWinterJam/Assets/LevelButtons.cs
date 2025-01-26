@@ -8,10 +8,7 @@ public class LevelButtons : MonoBehaviour
     public void SkipLevel()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        if (currentScene + 1 > SceneManager.sceneCount)
-            Exit();
-        else
-            SceneManager.LoadScene(currentScene + 1);
+        SceneManager.LoadScene(currentScene + 1);
     }
 
     public void Exit()

@@ -484,8 +484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accelereation: 35
   deceleration: 20
-  maxSpeed: 5
-  jumpForce: 10
+  maxSpeed: 5.5
+  jumpForce: 11
   groundLayer:
     serializedVersion: 2
     m_Bits: 128

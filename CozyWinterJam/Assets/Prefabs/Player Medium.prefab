@@ -331,7 +331,7 @@ MonoBehaviour:
   accelereation: 50
   deceleration: 20
   maxSpeed: 6
-  jumpForce: 12
+  jumpForce: 11
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
