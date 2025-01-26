@@ -337,7 +337,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 173209377}
   - component: {fileID: 173209379}
   - component: {fileID: 173209378}
+  - component: {fileID: 173209380}
   m_Layer: 5
   m_Name: Tree
   m_TagString: Untagged
@@ -429,6 +430,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173209376}
   m_CullTransparentMesh: 1
+--- !u!114 &173209380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173209376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0f018c63693244790510ebd7e906a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree: {fileID: 173209377}
 --- !u!1 &179332155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1271,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1237828551275859827, guid: 6787741039bcaa64aa0b22bb6f558e59, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2538368413000824706, guid: 6787741039bcaa64aa0b22bb6f558e59, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1300,6 +1318,10 @@ PrefabInstance:
     - target: {fileID: 2538368413000824706, guid: 6787741039bcaa64aa0b22bb6f558e59, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384764679859431333, guid: 6787741039bcaa64aa0b22bb6f558e59, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9200638034418342413, guid: 6787741039bcaa64aa0b22bb6f558e59, type: 3}
       propertyPath: m_Name
@@ -2068,7 +2090,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3030,6 +3052,7 @@ GameObject:
   - component: {fileID: 1681536612}
   - component: {fileID: 1681536614}
   - component: {fileID: 1681536613}
+  - component: {fileID: 1681536615}
   m_Layer: 5
   m_Name: Tree
   m_TagString: Untagged
@@ -3095,6 +3118,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681536611}
   m_CullTransparentMesh: 1
+--- !u!114 &1681536615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681536611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0f018c63693244790510ebd7e906a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree: {fileID: 1681536612}
 --- !u!1 &1777071758
 GameObject:
   m_ObjectHideFlags: 0
